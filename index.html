@@ -1,0 +1,35 @@
+<!-- d:\laragon\www\eSign\index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplikasi Tanda Tangan Elektronik BSrE</title>
+</head>
+<body>
+    <h1>Layanan Tanda Tangan Elektronik BSrE</h1>
+
+    <h2>Tanda Tangan Dokumen</h2>
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        Pilih file PDF: <input type="file" name="pdf_file" accept=".pdf" required><br><br>
+        NIK: <input type="text" name="nik" required><br><br>
+        Passphrase: <input type="password" name="passphrase" required><br><br>
+        <input type="submit" name="action" value="Sign Document">
+    </form>
+
+    <hr>
+
+    <h2>Verifikasi Dokumen</h2>
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        Pilih file PDF yang sudah ditandatangani: <input type="file" name="signed_pdf_file" accept=".pdf" required><br><br>
+        <input type="submit" name="action" value="Verify Document">
+    </form>
+
+    <hr>
+
+    <h2>Cek Status Pengguna</h2>
+    <form action="process.php" method="post">
+        NIK: <input type="text" name="status_nik" required><br><br>
+        <input type="submit" name="action" value="Check User Status">
+    </form>
+
+</body>
+</html>
